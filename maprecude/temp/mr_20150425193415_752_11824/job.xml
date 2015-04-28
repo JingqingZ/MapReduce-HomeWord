@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><configuration>
+<property><name>odps.mapred.input.desc</name><value>[{"tblName":"simcompute_in","partSpec":{"dt":"20140102"},"label":"__default__"}]</value></property>
+<property><name>odps.mapred.map.class</name><value>mtmoon.group.maprecude.MyMapper</value></property>
+<property><name>odps.mapred.combine.class</name><value>mtmoon.group.maprecude.MyCombiner</value></property>
+<property><name>odps.mapred.job.name</name><value>mr_20150425193415_752_11824</value></property>
+<property><name>odps.mapred.mapoutput.key.schema</name><value>i:BIGINT,k:BIGINT</value></property>
+<property><name>odps.mapred.mapoutput.value.schema</name><value>which:STRING,j:BIGINT,val:BIGINT</value></property>
+<property><name>odps.mapred.output.desc</name><value>[{"tblName":"simcompute_out","partSpec":{"dt":"20140102"},"label":"__default__"}]</value></property>
+<property><name>odps.mapred.reduce.class</name><value>mtmoon.group.maprecude.MyReducer</value></property>
+</configuration>

@@ -1,0 +1,4 @@
+project=local
+table=simcompute_out
+columns=sid:BIGINT,simid:BIGINT
+partitions=dt:STRING

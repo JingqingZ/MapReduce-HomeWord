@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapred>
+    <!-- profile -->
+    <baseId>c9bfa804c51627a9e8d2ebac36c6c5e8</baseId>
+    <projectId>1883</projectId>
+    <resourceName>maprecude</resourceName>
+    <idePath>工作流/myfolder</idePath>
+
+    <!-- classes -->
+    <jobLauncher>mtmoon.group.maprecude.JobLauncher</jobLauncher>
+    <mapper>mtmoon.group.maprecude.MyMapper</mapper>
+    <reducer>mtmoon.group.maprecude.MyReducer</reducer>
+    <combiner>mtmoon.group.maprecude.MyCombiner</combiner>
+
+    <!--task-->
+    <mapOutputKey>i:bigint</mapOutputKey>
+    <mapOutputValue>which:string,k:bigint,j:bigint,val:bigint</mapOutputValue>
+    <!--
+    <partitionColumns>col1,col2</partitionColumns>
+    <outputKeySortColumns>col1,col2</outputKeySortColumns>
+    <outputKeySortOrders>ASC,DESC</outputKeySortOrders>
+    <outputGroupingColumns>col1,col2</outputGroupingColumns>
+    <numReduceTask>8</numReduceTask>
+    <memoryForMapTask>2048</memoryForMapTask>
+    <memoryForReduceTask>2048</memoryForReduceTask>
+    -->
+
+    <!-- tables -->
+    <inputTables>
+        <table>
+            <name>simcompute_in</name>
+            <partitions>
+                <partition>dt={yyyymmdd}</partition>
+            </partitions>
+        </table>
+    </inputTables>
+    <outputTable>
+        <name>simcompute_out</name>
+        <partition>dt={yyyymmdd}</partition>
+    </outputTable>
+</mapred>
